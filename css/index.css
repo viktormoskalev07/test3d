@@ -1,0 +1,413 @@
+/*==========  General Styles  ==========*/
+/*==========  Navbar  ==========*/
+#mainNav .navbar-nav>li>a,
+#mainNav .navbar-nav>li>a:hover,
+#mainNav .navbar-nav>li>a:focus:hover,
+#mainNav .navbar-nav>li>a:active,
+#mainNav .navbar-nav>li>a:focus,
+#mainNav .navbar-nav>li>a:focus-within {
+    color: #343a40;
+}
+#mainNav .navbar-nav>li>a:hover,
+#mainNav .navbar-nav>li>a:focus:hover {
+    text-decoration: underline;
+}
+#mainNav .dropdown-menu {
+    background-color: #FFF;
+}
+.dropdown-item {
+    color: #343a40;
+    margin: 10px 0;
+}
+#mainNav .navbar-brand img,
+#mainNav.navbar-shrink .navbar-brand img {
+    height: 40px;
+}
+#mainNav .navbar-nav>li>a {
+    font-size: 1.3rem;
+    font-family: unset;
+    letter-spacing: unset;
+    text-transform: unset;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#mainNav .dropdown-menu {
+    font-family: unset;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #343a40;
+    text-decoration: underline;
+    background-color: unset;
+}
+.navbar-shrink .dropdown .dropdown-item,
+.navbar-shrink .dropdown .dropdown-item:hover {
+    color: #ebebeb;
+}
+#sign-up-btn,
+#sign-in-btn {
+    width: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #FFF;
+}
+#sign-in-btn {
+    border: 1px solid #7935f1;
+}
+/*==========  End Navbar  ==========*/
+
+/*==========  Hero  ==========*/
+header.masthead,
+header.masthead.masthead-bg {
+    background: #FFF;
+}
+header.masthead .header-content {
+    max-width: 90%;
+}
+header.masthead .header-content h5 {
+    font-weight: 300;
+}
+.hero-img {
+    width: 80%; 
+    height: auto;
+}
+.counter.counter-large {
+    font-size: 2.5rem;
+}
+.print-hours-suffix {
+    font-size: 2rem;
+}
+.print-hours div {
+    display: inline-block;
+}
+.cta a.btn,
+#cta a.btn {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    width: 300px;
+}
+.cta h6 {
+    text-align: center;
+    width: 300px;
+}
+/*==========  End Hero  ==========*/
+
+/*==========  Benefits  ==========*/
+.thumbnail-section {
+    position: relative;
+    width: 100%;
+}
+.thumbnail-section .video-img-thumbnail {
+    width: 100%; 
+    height: auto;
+}
+#homepage-video {
+    position: absolute;
+    margin: -30px;
+}
+.thumbnail-section .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#how .benefits .benefit-item img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 30px;
+}
+#how .benefits .benefit-item {
+    margin-bottom: 50px;
+}
+#how .benefits .row {
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+/*==========  End Benefits  ==========*/
+
+/*==========  Gallery  ==========*/
+#examples {
+    background-color: unset;
+}
+#examples img {
+    height: 400px;
+    width: auto;
+}
+.video-js.vjs-fluid {
+    height: 200px !important;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* slick carousel slider plugin */
+.slider.demo {
+    width: 70%;
+}
+.slick-prev::before,
+.slick-next::before {
+    content: unset;
+}
+.slick-prev>img,
+.slick-next>img {
+    height: 60px !important;
+}
+.slick-prev>img {
+    transform: rotate(180deg);
+}
+.slick-prev {
+    left: -50px
+}
+/*==========  End Gallery  ==========*/
+
+/*==========  Steps  ==========*/
+#start .steps .row div img {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+/*==========  End Steps  ==========*/
+
+/*==========  Testimonials  ==========*/
+.testimonials .testimonial {
+    padding-bottom: 50px;
+}
+/*==========  End Testimonials  ==========*/
+
+/*==========  Founder  ==========*/
+#team {
+    background-color: #f7f8fa;
+    color: unset;
+}
+.avatar-cropper {
+    width: 300px;
+    height: 300px;
+}
+/*==========  End Founder  ==========*/
+
+/*==========  Bottom CTA  ==========*/
+/*==========  End Bottom CTA  ==========*/
+
+/*==========  Other Styles  ==========*/.print-hours-number,
+.print-hours-suffix,
+.section-heading h2,
+.founder-profile .name {
+    color: #7935f1;
+    margin-bottom: 15px;
+}
+.view-more,
+.print-hours-subtitle,
+.testimonials p,
+.founder-profile .details {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+.grey-section {
+    background-color: #f7f8fa;
+}
+#top,
+#footer {
+    padding-top: 60px;
+}
+.view-more {
+    text-align: right 
+}
+/*==========  End Other Styles  ==========*/
+/* Team Page */
+.team-section {
+    margin: 100px 0;
+}
+/* Mobile Responsive Breakpoints */
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .hero-img {
+        width: 100%;
+    }
+}
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width : 992px) { */
+@media only screen and (max-width : 1024px) {
+/*==========  Navbar  ==========*/
+#mainNav {
+    background-color: #FFF;
+}
+#mainNav.navbar-shrink {
+    background-color: #000;
+}
+#mainNav.navbar-shrink .navbar-toggler {
+    color: rgba(255,255,255,.75);
+}
+#mainNav.navbar-shrink .navbar-nav > li > a {
+    color: rgba(255,255,255,.75);
+}
+#mainNav .navbar-toggler {
+    color: unset;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+}
+#sign-up-btn, #sign-in-btn {
+    margin-left: unset;
+    margin-right: unset;
+}
+#mainNav .navbar-toggler svg {
+    width: 24px;
+    height: 24px;
+}
+a.nav-link.btn {
+    margin: 10px 0;
+}
+.dropdown-menu {
+    border: none;
+}
+.navbar-shrink .dropdown .dropdown-item{
+    color: unset;
+}
+#mainNav.navbar-shrink .dropdown-menu {
+    background-color: unset;
+}
+/*==========  End Navbar  ==========*/
+
+/*==========  Hero  ==========*/
+.hero-cta-btn-section {
+    text-align: center !important;
+}
+.cta h6 {
+    margin: auto;
+}
+/*==========  End Hero  ==========*/
+
+/*==========  Benefits  ==========*/
+
+/*==========  End Benefits  ==========*/
+
+/*==========  Gallery  ==========*/
+
+/*==========  End Gallery  ==========*/
+
+/*==========  Steps  ==========*/
+
+/*==========  End Steps  ==========*/
+
+/*==========  Testimonials  ==========*/
+
+/*==========  End Testimonials  ==========*/
+
+/*==========  Founder  ==========*/
+.team-section .avatar-cropper,
+#team .avatar-cropper {
+    margin-bottom: 40px;; 
+}
+.founder-profile {
+    text-align: center !important;
+}
+/*==========  End Founder  ==========*/
+
+/*==========  Bottom CTA  ==========*/
+
+/*==========  End Bottom CTA  ==========*/
+
+/*==========  Other Styles  ==========*/
+/* Team members */
+.team-members .avatar-cropper {
+    width: 200px;
+    height: 200px;
+}
+/*==========  End Other Styles  ==========*/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {    
+    /*==========  Navbar  ==========*/
+    #mainNav {
+        background-color: #FFF;
+    }
+    #mainNav .navbar-toggler {
+        color: #343a40;
+        border: none;
+    }
+    #mainNav .navbar-brand img, 
+    #mainNav.navbar-shrink .navbar-brand img {
+        height: 38px;
+    }
+    /*==========  End Navbar  ==========*/
+    
+    /*==========  Hero  ==========*/
+    header.masthead .header-content h1 {
+        font-size: 27px !important;
+    }
+    header.masthead .header-content h5 {
+        font-size: 1.1rem;
+        line-height: 24px;
+    }
+    .print-hours .print-hours-number,
+    .print-hours .print-hours-suffix {
+        font-size: 1.5rem;
+    }
+    .print-hours-subtitle {
+        padding-bottom: 60px;
+    }
+    .hero-right {
+        padding-top: 30px;
+    }
+    /*==========  End Hero  ==========*/
+
+    /*==========  Benefits  ==========*/
+    
+    /*==========  End Benefits  ==========*/
+    
+    /*==========  Gallery  ==========*/
+    
+    /*==========  End Gallery  ==========*/
+    
+    /*==========  Steps  ==========*/
+    
+    /*==========  End Steps  ==========*/
+    
+    /*==========  Testimonials  ==========*/
+    .testimonials p {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    /*==========  End Testimonials  ==========*/
+    
+    /*==========  Founder  ==========*/
+    
+    /*==========  End Founder  ==========*/
+    
+    /*==========  Bottom CTA  ==========*/
+    
+    /*==========  End Bottom CTA  ==========*/
+    
+    /*==========  Other Styles  ==========*/
+    #top {
+        margin-top: 80px;
+    }
+    .view-more {
+        font-size: 1.2em;
+        text-align: center;
+    }    
+    section h2 {
+        font-size: 35px;
+    }
+    /*==========  End Other Styles  ==========*/
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}

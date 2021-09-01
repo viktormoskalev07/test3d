@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="THE Octoprint plugin to stop failed 3d prints and control your printer from ANYWHERE. For 3d printing businesses and Makers to save time, filament and your sanity.">
+  <meta name="author" content="">
+  <meta property="fb:app_id" content="250129119215131" />
+
+  <title>3D Printer Remote Monitoring & Control · The Spaghetti Detective</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato|Catamaran:100,200,300,400,500,600,700,800,900|Muli|Raleway:300,400,500,600,700,800,900"
+    rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+  <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="vendor/aos.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+  <link href="business/css/theme-red.css" rel="stylesheet">
+  <link href="business/css/custom.css" rel="stylesheet">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133768246-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765795194"></script>
+  
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=615679848878196&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Full story snippet -->
+  <!-- <script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'G2TPY';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.consent=function(a){g("consent",!arguments.length||a)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script> -->
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/"><img src="img/logo-inverted.png" /></a>
+    </div>
+  </nav>
+
+  <header class="masthead" style="background: url('/img/fire-hazard.jpg');opacity: 1;" id="top">
+    </div>
+    <div class="container" style="padding-top: 66px;">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img src="/img/the-fire-detective.png" style="max-height: 72px;">
+          <h1 class="px-5" style="color: white; font-weight: bold; font-size: 1.8em;">AI-Powered Fire Detection and Alerts for Your 3D
+            Printers</h1>
+          <h4 style="color: white; margin-top: 8rem;">Beta Testing Is Now Open </h4>
+          <a class="btn btn-lg btn--primary " href="#modal-14"> <span style="font-size: 20px; color: white;">Sign Up For
+              Free</span></a>
+        </div>
+        <div class="col-md-12 text-right" style="margin-top: 8rem;">
+          A Product by <span style="font-weight: bolder;">The Spaghetti Detective</span>
+        </div>
+      </div>
+      <div data-ml-modal id="modal-14">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog">
+          <div class="modal-content center">
+            <h4 class="text-center">Sign Up for The Fire Detective Beta Testing</h4>
+            <form class="row m-0" id="lead-form">
+              <div class="col-md-12"> <input type="text" name="name" placeholder="Your Name"> </div>
+              <div class="col-md-12"> <input type="text" name="email" placeholder="Your Email"> </div>
+              <div class="col-md-12"> <button type="submit" class="btn btn--primary type--uppercase">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <footer class="nav-footer" id="footer">
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+    <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=176252365784303&autoLogAppEvents=1"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <section class="sitemap"><a href="/" class="nav-home"></a>
+      <div>
+        <h5>The Product</h5><a href="https://www.thespaghettidetective.com/">What Is The Spaghetti Detective</a>
+        <a href="https://www.thespaghettidetective.com/#examples">See It In Action</a>
+        <a href="https://app.thespaghettidetective.com/ent/pricing/">Pricing</a>
+        <a href="/docs/open-source">Open Source</a>
+      </div>
+      <div>
+        <h5>Help</h5><a href="/docs/octoprint-plugin-setup.html">Getting Started</a>
+        <a href="/docs/detection-print-job-settings.html">Failure Detection</a>
+        <a href="/docs/webcam-streaming-for-human-eyes.html">Webcam Streaming</a>
+        <a href="/docs/octoprint-is-offline.html">Help! I Got a Prob</a>
+        <a href="/docs/contact-us-for-support.html">Contact Us</a>
+      </div>
+      <div>
+        <h5>About Us</h5>
+        <a href="/blog/">The Detective Blog</a>
+        <a href="#">The Spaghetti Detective Team</a><a href="https://www.thespaghettidetective.com/terms.html">Terms of
+          Use</a>
+        <a href="https://www.thespaghettidetective.com/privacy.html">Privacy Policy</a><a
+          href="https://www.thespaghettidetective.com/disclaimer.html">Disclaimer</a>
+      </div>
+      <div class="footerSection">
+        <h5>Stay Updated</h5>
+        <div class="social">
+          <a href="https://twitter.com/thespaghettispy" class="twitter-follow-button" data-show-count="false">
+            Follow @thespaghettispy
+          </a>
+        </div>
+        <div class="social">
+          <div class="fb-like" data-href="https://www.facebook.com/thespaghettidetective/" data-layout="button"
+            data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="social">
+          <div class="g-ytsubscribe" data-channelid="UCbAJcR6t5lrdZ1JXjPPRjGA" data-layout="default" data-theme="dark"
+            data-count="hidden"></div>
+        </div>
+        <div class="social">
+          <a class="github-button" // part of the https://buttons.github.io/buttons.js script in siteConfig.js
+            href="https://github.com/TheSpaghettiDetective/TheSpaghettiDetective"
+            data-count-href="https://github.com/TheSpaghettiDetective/TheSpaghettiDetective/stargazers"
+            data-show-count="true" data-count-aria-label="# stargazers on GitHub"
+            aria-label="Star this project on GitHub">
+            TheSpaghettiDetective
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="copyright">© The Spaghetti Detective 2020. All Rights Reserved.</section>
+  </footer>
+
+  <script id="timelapses-data"
+    type="application/json">[{"id": 48, "title": "T-00207.mp4", "priority": 1000000, "p_json_url": "https://tsd-pub-static.s3.amazonaws.com/pub-tls/T-00207.mp4.json"},
+  {"id": 2, "title": "T-00002.mp4", "priority": 1000000, "p_json_url": "https://tsd-pub-static.s3.amazonaws.com/pub-tls/T-00002.mp4.json"},
+  {"id": 43, "title": "T-00202.mp4", "priority": 1000000, "p_json_url": "https://tsd-pub-static.s3.amazonaws.com/pub-tls/T-00202.mp4.json"},
+  {"id": 47, "title": "T-00206.mp4", "priority": 1000000, "p_json_url": "https://tsd-pub-static.s3.amazonaws.com/pub-tls/T-00206.mp4.json"}]</script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="vendor/bootstrap-notify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.382.0/aws-sdk.min.js"></script>
+  <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.5/all/gauge.min.js"></script>
+  <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="vendor/jquery-appear/jquery.appear.min.js"></script>
+  <script src="vendor/jquery-countto/jquery.countto.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/aos.js"></script>
+  <script src="business/js/airtable.browser.js"></script>
+  <script src="js/analytics.js"></script>
+
+  <script>
+    var Airtable = require('airtable');
+    var base = new Airtable({ apiKey: 'key5t1R64O8Q1dBzi' }).base('app0SfFG9lDhk11HV');
+
+    $('#lead-form').submit(function (event) {
+      // get all the inputs into an array.
+      var $inputs = $('#lead-form :input');
+
+      // not sure if you wanted this, but I thought I'd add it.
+      // get an associative array of just the values.
+      var values = {};
+      $inputs.each(function () {
+        values[this.name] = $(this).val();
+      });
+      base('fire_alerts_leads').create([
+        {
+          "fields": {
+            Name: values['name'],
+            Email: values['email'],
+          }
+        }
+      ], function (err, records) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        window.location.replace("/fire-alerts.html");
+      });
+      event.preventDefault();
+    });
+  </script>
+
+</body>
+
+</html>
