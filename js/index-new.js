@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('iframe.loadingLazyIframe').attr('src', 'https://www.youtube.com/embed/VRoV9Z1C1yM');
     $('.video.loadingLazyVideo').removeClass('loadingLazyVideo');
-  }, 2000)
+  }, 3000)
 })
 
 // Animation on Scroll
