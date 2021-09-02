@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   //google page speed
   
-  if(localStorage.getItem('script') !== null || window.screen.width > 768){
+  if(document.querySelector('[data-script]') !== null || localStorage.getItem('script') !== null || window.screen.width > 768){
     scriptLazy();
   } else {
     setTimeout(scriptLazy, 2000);
