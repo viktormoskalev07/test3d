@@ -5,7 +5,7 @@ $(document).ready(function () {
   }, 2000);
 
   //google page speed
-
+  
   if(localStorage.getItem('script') !== null || window.screen.width > 768){
     scriptLazy();
   } else {
