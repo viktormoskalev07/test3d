@@ -8,7 +8,7 @@ $(document).ready(function () {
   if(localStorage.getItem('script') !== null || window.screen.width > 768){
     scriptLazy();
   } else {
-    setTimeout(scriptLazy, 200);
+    setTimeout(scriptLazy, 2000);
   }
 
   window.addEventListener('scroll', youtubeScroll);
