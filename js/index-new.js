@@ -1,8 +1,4 @@
-if(localStorage.getItem('script') !== null || window.screen.width > 768){
-  scriptLazy();
-} else {
-  setTimeout(scriptLazy, 1000);
-};
+
 
 $(document).ready(function () {
   setTimeout(function () {
@@ -11,18 +7,20 @@ $(document).ready(function () {
   }, 2000);
 
   //google page speed
-  
-  
   if(document.querySelector('#lazyVideo') !== null){
     window.addEventListener('scroll', youtubeScroll);
   }
   
-  //
+  if(localStorage.getItem('script') !== null || window.screen.width > 768){
+    scriptLazy();
+  } else {
+    setTimeout(scriptLazy, 2000);
+  };
 });
 
 //google page speed
 function scriptLazy(){
-  let scr = ['js/analytics.js', 'js/gallery-new.js'];
+  let scr = ['https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js' ,'js/analytics.js', 'js/gallery-new.js'];
   for(let i = 0; i < scr.length; i++){
     let scrT = document.createElement('script');
     scrT.setAttribute('src', scr[i]);
@@ -41,7 +39,6 @@ function youtubeScroll(){
     container.classList.remove('loadingLazyVideo');
   }
 }
-//
 
 // Animation on Scroll
 
