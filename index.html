@@ -37,6 +37,7 @@
   <link rel="preload" href="fonts/circular-std/CircularStd-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/circular-std/CircularStd-Book.woff2" as="font" type="font/woff2" crossorigin>
   <script async src="https://www.googleoptimize.com/optimize.js?id=OPT-5J7WK4M"></script>
+
   <!-- TODO: Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -65,6 +66,7 @@
     <link rel="stylesheet" href="fonts/circular-std/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   </noscript>
+
 </head>
 
 <body id="top">
@@ -312,9 +314,9 @@
                 <figure class="composite web">
                   <img width="60" height="60" class="background lazyload" data-src="img/web-frame.png" alt="Web" loading="lazy">
                   <div class="foreground">
-                    <img width="60" height="60" class="active lazyload" data-src="img/features-animations/1.gif" alt="Sample">
-                    <img width="60" height="60" class="lazyload" data-src="img/features-animations/2.gif" alt="Sample">
-                    <img width="60" height="60" class="lazyload" data-src="img/features-animations/3.gif" alt="Sample">
+                    <img width="60" height="60" class="active lazyload" data-src="img/features-animations/1.gif" alt="Sample" loading="lazy">
+                    <img width="60" height="60" class="lazyload" data-src="img/features-animations/2.gif" alt="Sample" loading="lazy">
+                    <img width="60" height="60" class="lazyload" data-src="img/features-animations/3.gif" alt="Sample" loading="lazy">
                   </div>
                 </figure>
                 <figure class="composite phone">
@@ -331,7 +333,7 @@
 
           <div class="controls">
             <div class="control left disabled">
-              <img width="60" height="60" class="lazyload" data-src="img/slider-arrow-right.svg" src="img/slider-arrow-right.svg" alt="Left">
+              <img width="60" height="60" class="lazyload" data-src="img/slider-arrow-right.svg" src="img/slider-arrow-right.svg" alt="Left" loading="lazy">
             </div>
             <div class="indicators">
               <!-- JS generated HTML here -->
@@ -382,7 +384,7 @@
               <picture>
                 <source class="lazyload" data-srcset="img/body-illustration-2.webp" srcset="img/body-illustration-2.webp" type="image/webp">
                 <source class="lazyload" data-srcset="img/body-illustration-2-svg-resize.svg" srcset="img/body-illustration-2.png" type="image/png">
-                <img width="60" height="60" class="background lazyload" data-src="img/body-illustration-2-svg-resize.svg" src="img/body-illustration-2.png" alt="Illustration">
+                <img width="60" height="60" class="background lazyload" data-src="img/body-illustration-2-svg-resize.svg" src="img/body-illustration-2.png" alt="Illustration" loading="lazy">
               </picture>
             </figure>
           </div>
@@ -817,7 +819,7 @@
   </div>
 </footer>
 
-<script defer id="utm_linking" type="text/javascript">
+<script id="utm_linking" type="text/javascript">
   // For each link that doesn't have search params, add the current ones (e.g. ?utm_campaign=v1)
     document.querySelectorAll("a").forEach((el) => {
   if (el.href.indexOf("?") === -1) {

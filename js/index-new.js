@@ -11,8 +11,10 @@ $(document).ready(function () {
   } else {
     setTimeout(scriptLazy, 2000);
   }
+  if(document.querySelector('#lazyVideo') !== null){
+    window.addEventListener('scroll', youtubeScroll);
+  }
   
-  window.addEventListener('scroll', youtubeScroll);
   //
 });
 
