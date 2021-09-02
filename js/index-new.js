@@ -5,7 +5,6 @@ $(document).ready(function () {
   }, 2000);
 
   //google page speed
-  setTimeout(prefetch, 500);
 
   if(localStorage.getItem('script') !== null || window.screen.width > 768){
     scriptLazy();
@@ -18,15 +17,6 @@ $(document).ready(function () {
 });
 
 //google page speed
-function prefetch(){
-  const l = ['https://ajax.googleapis.com', 'https://www.youtube.com', 'https://googleads.g.doubleclick.net', 'https://cdnjs.cloudflare.com/', 'https://pro.fontawesome.com/', 'https://ton.twimg.com', 'https://pbs.twimg.com', 'https://tsd-pub-static.s3.amazonaws.com', 'https://buttons.github.io', 'https://cdn.jsdelivr.net', 'https://api.github.com', 'https://cdn4.mxpnl.com', 'https://api-js.mixpanel.com'];
-  for(let i = 0; i < l.length; i++){
-    const script = document.createElement('link');
-    script.setAttribute('rel', 'dns-prefetch');
-    script.setAttribute('href', l[i]);
-    document.head.appendChild(script);
-  }
-}
 function scriptLazy(){
   let scr = document.querySelectorAll('[data-script]');
   scr.forEach(i => {
