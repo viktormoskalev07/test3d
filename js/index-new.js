@@ -1,3 +1,9 @@
+if(localStorage.getItem('script') !== null || window.screen.width > 768){
+  scriptLazy();
+} else {
+  setTimeout(scriptLazy, 1000);
+};
+
 $(document).ready(function () {
   setTimeout(function () {
     /*! lazysizes - v5.3.2 */
@@ -6,11 +12,7 @@ $(document).ready(function () {
 
   //google page speed
   
-  if(document.querySelector('[data-script]') !== null || localStorage.getItem('script') !== null || window.screen.width > 768){
-    scriptLazy();
-  } else {
-    setTimeout(scriptLazy, 2000);
-  }
+  
   if(document.querySelector('#lazyVideo') !== null){
     window.addEventListener('scroll', youtubeScroll);
   }
@@ -20,14 +22,15 @@ $(document).ready(function () {
 
 //google page speed
 function scriptLazy(){
-  let scr = document.querySelectorAll('[data-script]');
-  scr.forEach(i => {
-    let src = i.getAttribute('data-script');
-    i.setAttribute('src', src);
-    if(localStorage.getItem('script') == null){
-      localStorage.setItem('script', 'scripts');
-    }
-  });
+  let scr = ['js/analytics.js', 'js/gallery-new.js'];
+  for(let i = 0; i < scr.length; i++){
+    let scrT = document.createElement('script');
+    scrT.setAttribute('src', scr[i]);
+    document.body.appendChild(scrT);
+  }
+  if(localStorage.getItem('script') == null){
+    localStorage.setItem('script', 'scripts');
+  }
 }
 function youtubeScroll(){
   const container = document.querySelector('#lazyVideo');
