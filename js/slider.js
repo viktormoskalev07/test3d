@@ -45,7 +45,7 @@ class Slider {
     this.currentTranslate = 0;
     this.prevTranslate = 0;
     this.animationID = null;
-    this.currentIndex = 0;
+    this.currentIndex = 0; 
 
     this.intervalID = null;
     this.intervalTime = intervalTime;
