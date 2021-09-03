@@ -83,7 +83,7 @@ window.addEventListener('load', function () {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
     let scriptDelay = 1;
     if (mediaQuery) {
-        scriptDelay = 1000 ;
+        scriptDelay = 1200 ;
     }
     addScript('https://www.googleoptimize.com/optimize.js?id=OPT-5J7WK4M', scriptDelay).addEventListener('load', () => {
         (function (w, d, s, l, i) {
@@ -105,9 +105,9 @@ window.addEventListener('load', function () {
 
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
         addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', 0);
-        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1', 2200);
-        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', 2200 );
-        addScript('js/analytics.js', 2200 );
+        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay+2800);
+        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay+2800 );
+        addScript('js/analytics.js', scriptDelay+2800 );
         scrollLoader('.lazy-video__activator-js', () => {
          addScript('https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js', 0).addEventListener('load', () => {
             addScript('js/gallery-new.min.js', 0);
