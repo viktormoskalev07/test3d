@@ -1,15 +1,4 @@
-
-let speedIndex =1;
-try{
-    const downLink = navigator.connection.downlink;
-    if(downLink>1){
-        speedIndex=downLink;
-    }
-} catch{};
-
  
-document.querySelector('.section-title').innerHTML='speed'+speedIndex;
-
 
 // onscroll observer 
 const scrollLoader = (selector, cusomEvent) => {
@@ -34,9 +23,9 @@ const scrollLoader = (selector, cusomEvent) => {
         return
     }
     localStorage.setItem(selector, true);
-    let targetTimeout = 1000/speedIndex;
+    let targetTimeout = 1000 ;
     if (mediaQuery) {
-        targetTimeout = 8000/speedIndex;
+        targetTimeout = 8000 ;
     }
     setTimeout(() => {
         addSrc();
@@ -94,7 +83,7 @@ window.addEventListener('load', function () {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
     let scriptDelay = 1;
     if (mediaQuery) {
-        scriptDelay = 1500/speedIndex;
+        scriptDelay = 1000 ;
     }
     addScript('https://www.googleoptimize.com/optimize.js?id=OPT-5J7WK4M', scriptDelay).addEventListener('load', () => {
         (function (w, d, s, l, i) {
@@ -116,9 +105,9 @@ window.addEventListener('load', function () {
 
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
         addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', 0);
-        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1', 2000/speedIndex);
-        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', 2000/speedIndex);
-        addScript('js/analytics.js', 2000/speedIndex);
+        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1', 2200);
+        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', 2200 );
+        addScript('js/analytics.js', 2200 );
         scrollLoader('.lazy-video__activator-js', () => {
          addScript('https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js', 0).addEventListener('load', () => {
             addScript('js/gallery-new.min.js', 0);
