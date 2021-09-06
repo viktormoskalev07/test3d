@@ -1,0 +1,105 @@
+// Styling for the features section
+section.features {
+  .section-heading {
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .device-container,
+  .feature-item {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  .device-container {
+    margin-bottom: 100px;
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+  .feature-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    h3 {
+      font-size: 30px;
+    }
+    i {
+      font-size: 80px;
+      display: block;
+      margin-bottom: 15px;
+      background: -webkit-linear-gradient(
+        to left,
+        $theme-secondary,
+        $theme-tertiary
+      );
+      background: linear-gradient(to left, $theme-secondary, $theme-tertiary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .team-fullwidth {
+    .avatar-cropper {
+      margin: 1rem 3rem;
+      @media (max-width: 768px) {
+        float: unset !important;
+        margin: 1rem auto;
+      }
+    }
+  }
+  .team-item {
+    .avatar-cropper {
+      margin: 1rem auto;
+    }
+  }
+  @media (min-width: 992px) {
+    .feature-item {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.avatar-cropper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.rounded {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.user-quote {
+  font-style: italic;
+  font-weight: lighter;
+  color: #ccc;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+
+  &.text-right {
+    padding-left: 8%;
+  }
+
+  &.text-left {
+    padding-right: 8%;
+  }
+}
+
+#pricing {
+  .card-body {
+    display: flex;
+    flex-flow: column;
+
+    .btn-outline {
+      margin-top: auto;
+    }
+  }
+}

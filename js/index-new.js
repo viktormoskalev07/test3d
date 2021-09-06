@@ -103,6 +103,7 @@ navbar.querySelector('.navbar-toggler').addEventListener('click', () => {
     navbar.classList.remove('collapsed');
   } else {
     navbar.classList.add('collapsed');
+  
   }
 });
 

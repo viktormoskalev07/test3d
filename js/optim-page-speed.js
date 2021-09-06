@@ -76,7 +76,7 @@ function addScript(path, stimeout, integrityProp, crossoriginProp) {
     }
     if(!mediaQuery){
         stimeout= stimeout*2;
-        console.log(stimeout , path);
+       
     }
     const someJs = document.createElement('script');
     someJs.defer = true;
@@ -99,11 +99,12 @@ window.addEventListener('load', function () {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
     let scriptDelay = 200;
     if (mediaQuery) {
-        scriptDelay = 400 ;
+        scriptDelay = 500 ;
     } 
+    addScript('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js',scriptDelay);
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
         addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', scriptDelay);
-        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay);
+        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay); 
         addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay);
         addScript('js/analytics.js', scriptDelay );
         scrollLoader('.lazy-video__activator-js', () => {
