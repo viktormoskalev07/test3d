@@ -47,7 +47,7 @@
       slide.innerHTML = `
         <div class="card">
           <div class="card-img-top">
-            <video id="tl-${timelapse.id}" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="${timelapse.p_json_url.replace('json', 'poster.jpg')}" data-setup='{"fluid": true, "playbackRates": [0.5, 1, 1.5, 2], "controlBar": {"fullscreenToggle": false}}'>
+            <video id="tl-${timelapse.id}" class="video-js vjs-default-skin vjs-big-play-centered" controls   poster="${timelapse.p_json_url.replace('json', 'poster.jpg')}" data-setup='{"fluid": true, "playbackRates": [0.5, 1, 1.5, 2], "controlBar": {"fullscreenToggle": false}}'>
               <source src="${timelapse.p_json_url.replace('.json', '')}" type='video/mp4'>
               <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
             </video>

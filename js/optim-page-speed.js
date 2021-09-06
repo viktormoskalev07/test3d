@@ -70,8 +70,8 @@ function addScript(path, stimeout, integrityProp, crossoriginProp) {
     if (localStorage.getItem(path)) {
         stimeout = 1;
     }
-    if(mediaQuery){
-        stimeout= stimeout/2;
+    if(!mediaQuery){
+        stimeout= stimeout*2;
     }
     const someJs = document.createElement('script');
     someJs.defer = true;
@@ -92,9 +92,9 @@ function addScript(path, stimeout, integrityProp, crossoriginProp) {
 }
 window.addEventListener('load', function () {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
-    let scriptDelay = 500;
+    let scriptDelay = 200;
     if (mediaQuery) {
-        scriptDelay = 1200 ;
+        scriptDelay = 400 ;
     }
     addScript('https://www.googleoptimize.com/optimize.js?id=OPT-5J7WK4M', scriptDelay+1800).addEventListener('load', () => {
         (function (w, d, s, l, i) {
@@ -116,9 +116,9 @@ window.addEventListener('load', function () {
 
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
         addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', 0);
-        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay+3200);
-        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay+3200 );
-        addScript('js/analytics.js', scriptDelay+3200 );
+        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay);
+        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay);
+        addScript('js/analytics.js', scriptDelay );
         scrollLoader('.lazy-video__activator-js', () => {
          addScript('https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js', 0).addEventListener('load', () => {
             addScript('js/gallery-new.min.js', 0);
