@@ -1,6 +1,4 @@
- 
-
-// onscroll observer 
+ // onscroll observer 
 const scrollLoader = (selector, cusomEvent) => {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
     const target = document.querySelector(selector);
@@ -12,8 +10,7 @@ const scrollLoader = (selector, cusomEvent) => {
             setTimeout(() => {
                 target.src = target.dataset.src; 
             }, 800);
-        }
-        
+        } 
     } 
     let addSrc = () => {
         if (target && firstLoad) {
@@ -51,11 +48,18 @@ const scrollLoader = (selector, cusomEvent) => {
             });
         };
         const options = {
-            rootMargin: '-20px',
+            rootMargin: '20px',
             threshold: 0.01
         }
         const observer = new IntersectionObserver(callback, options);
-        observer.observe(target);
+        let minimaldelay = 1;
+        if(target.dataset.minimaldelay){
+            minimaldelay=target.dataset.minimaldelay;
+        }
+       setTimeout(() => {
+             observer.observe(target);
+       }, minimaldelay);
+      
     } 
 }
 scrollLoader('.lazy_youtube__js')
@@ -72,6 +76,7 @@ function addScript(path, stimeout, integrityProp, crossoriginProp) {
     }
     if(!mediaQuery){
         stimeout= stimeout*2;
+        console.log(stimeout , path);
     }
     const someJs = document.createElement('script');
     someJs.defer = true;
@@ -95,27 +100,9 @@ window.addEventListener('load', function () {
     let scriptDelay = 200;
     if (mediaQuery) {
         scriptDelay = 400 ;
-    }
-    addScript('https://www.googleoptimize.com/optimize.js?id=OPT-5J7WK4M', scriptDelay+1800).addEventListener('load', () => {
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-T985NV3');
-    })
-
-
+    } 
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
-        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', 0);
+        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', scriptDelay);
         addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay);
         addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay);
         addScript('js/analytics.js', scriptDelay );
