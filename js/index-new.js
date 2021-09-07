@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 // Animation on Scroll
 
-AOS.init();
+AOS.init({ offset : -100, delay : 0  });
 
 
 // Live Stat

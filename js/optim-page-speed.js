@@ -1,17 +1,12 @@
- // onscroll observer 
+ // onscroll observer
 const scrollLoader = (selector, cusomEvent) => {
     const mediaQuery = window.matchMedia('(max-width: 480px)').matches;
     const target = document.querySelector(selector);
     let firstLoad = 1;
-    let nativeEvent = () => {
-        if(mediaQuery){
+    let nativeEvent = () => { 
+        // if function used without callback use that function
             target.src = target.dataset.src; 
-        } else{
-            setTimeout(() => {
-                target.src = target.dataset.src; 
-            }, 800);
-        } 
-    } 
+    }
     let addSrc = () => {
         if (target && firstLoad) {
             if (cusomEvent) {
@@ -23,12 +18,16 @@ const scrollLoader = (selector, cusomEvent) => {
         }
     }
     if (localStorage.getItem(selector)) {
+        // if user came second time load from cache immediately
         addSrc();
         return
     }
     localStorage.setItem(selector, true);
-    let targetTimeout = 1000 ;
+ 
+    let targetTimeout = 1500 ;
     if (mediaQuery) {
+               // if user did not scroll page , preload all data after that timeout ,
+                // this works only for YouTube and video.js it is not animation!!
         targetTimeout = 8000 ;
     }
     setTimeout(() => {
@@ -57,26 +56,26 @@ const scrollLoader = (selector, cusomEvent) => {
             minimaldelay=target.dataset.minimaldelay;
         }
        setTimeout(() => {
+        //    if user scroll to object , load immediately
              observer.observe(target);
        }, minimaldelay);
-      
-    } 
+
+    }
 }
 scrollLoader('.lazy_youtube__js')
 
-// onscroll observer 
+// onscroll observer
 
- 
 
-// script append 
+
+// script append
 function addScript(path, stimeout, integrityProp, crossoriginProp) {
     const mediaQuery = window.matchMedia('(min-width: 480px)').matches;
     if (localStorage.getItem(path)) {
         stimeout = 1;
     }
     if(!mediaQuery){
-        stimeout= stimeout*2;
-       
+        stimeout= stimeout*2; 
     }
     const someJs = document.createElement('script');
     someJs.defer = true;
@@ -100,25 +99,29 @@ window.addEventListener('load', function () {
     let scriptDelay = 200;
     if (mediaQuery) {
         scriptDelay = 500 ;
-    } 
+    }
     addScript('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js',scriptDelay);
     addScript('https://code.jquery.com/jquery-3.6.0.min.js', scriptDelay).addEventListener('load', () => {
-        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', scriptDelay);
-        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',scriptDelay); 
-        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', scriptDelay);
-        addScript('js/analytics.js', scriptDelay );
+        addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js', scriptDelay+500);
+        addScript('https://www.googletagmanager.com/gtag/js?id=UA-133768246-1',0);
+        addScript('https://www.googletagmanager.com/gtag/js?id=AW-765795194', 0);
+        addScript('js/analytics.js', 0 );
         scrollLoader('.lazy-video__activator-js', () => {
          addScript('https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js', 0).addEventListener('load', () => {
             addScript('js/gallery-new.min.js', 0);
-        }); 
-        }); 
-        addScript('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', 0).addEventListener('load', () => { 
+        });
+        });
+        addScript('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', 0).addEventListener('load', () => {
             addScript('js/slider.min.js', 0).addEventListener('load', () => {
                 addScript('js/index-new.min.js', 0);
-            });
+                const aoscss = document.createElement('link');
+                aoscss.rel='stylesheet';
+                    aoscss.href="css/aos.min.css";
+                    document.body.append(aoscss); 
+            }); 
         });
-    })  
+    })
 })
 
 
-// script append 
+// script append
